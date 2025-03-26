@@ -1,8 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import * as styles from "./index.module.css";
-import { ReactP5Wrapper } from "@p5-wrapper/react";
 import noiseInteractionSketch from "../sketches/NoiseInteractionSketch/NoiseInteractionSketch";
+import DynamicP5Wrapper from "../components/DynamicP5Wrapper";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -15,7 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
           pipeline. To find out more visit my dev.to article.
         </p>
         <div id="p5-container" className="sketchContainer">
-          <ReactP5Wrapper sketch={noiseInteractionSketch} />
+          <DynamicP5Wrapper sketch={noiseInteractionSketch} />
         </div>
       </div>
     </main>
